@@ -22,28 +22,34 @@ a:hover {
 
 .topline {
   background: #e5e5e5;
-  height: 40px;
+  min-height: 40px;
   max-width: 1440px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  display: block;
+  height: 40px; }
 
 @media screen and (max-width: 768px) {
   .topline-inner {
     display: none;
-    background-color: #282828;
+    background-color: grey;
     color: #fff;
-    position: absolute;
+    position: fixed;
     top: 40px;
-    left: 0px;
+    left: 0;
     opacity: 0.9;
     width: 100vw;
-    margin-left: -50px;
+    padding-left: 0;
     z-index: 1000; } }
 
 @media screen and (max-width: 576px) {
   .topline-inner {
-    width: 100vw;
-    margin: 0; } }
+    width: 100vw; } }
+
+@media screen and (max-width: 768px) {
+  .topline-list {
+    padding: 10px;
+    margin-bottom: 0; } }
 
 .topline-list_item {
   display: inline-block;
@@ -65,7 +71,9 @@ a:hover {
       margin: 0; } }
   @media screen and (max-width: 768px) {
     .topline-list_item a {
-      color: #fff; } }
+      color: #fff;
+      display: block;
+      border-bottom: 1px solid white; } }
 
 .entry {
   display: inline-block;
@@ -168,12 +176,15 @@ main {
 .navigation {
   height: 80px;
   max-width: 1440px;
-  background: url("../img/-.png") no-repeat;
-  background-size: cover; }
+  background-image: -webkit-gradient(linear, right top, left top, from(#e93832), to(#00295b));
+  background-image: linear-gradient(to left, #e93832 0%, #00295b 100%); }
   .navigation .category {
     height: 80px; }
   .navigation .category-item_image {
     margin-right: 24px; }
+    @media screen and (max-width: 576px) {
+      .navigation .category-item_image {
+        display: none; } }
   .navigation .category-item_image:first-child {
     margin-right: 19px; }
   .navigation .category-item_title {
@@ -181,6 +192,9 @@ main {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.9375rem; }
+    @media screen and (max-width: 576px) {
+      .navigation .category-item_title {
+        font-size: 0.75rem; } }
 
 .breadcrumb {
   padding-left: 0;
@@ -192,29 +206,136 @@ main {
   font-size: 2rem;
   font-weight: bold; }
 
-.product-visual_image-main {
-  padding: 20px; }
-  .product-visual_image-main img {
-    width: 100%;
-    height: auto; }
+.product-card {
+  background: #fff;
+  padding: 20px 10px; }
+
+.product-visual_image-main img {
+  width: 100%;
+  height: auto; }
 
 .product-visual_image-slider {
   padding: 10px 20px;
   position: relative; }
+  @media screen and (max-width: 576px) {
+    .product-visual_image-slider {
+      padding: 5px 10px; } }
+  .product-visual_image-slider div {
+    padding: 5px; }
+  .product-visual_image-slider img {
+    width: 100%;
+    height: auto; }
   .product-visual_image-slider::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
-    font-size: 30px;
-    top: 20px;
+    font-size: 1.875rem;
+    top: 35%;
+    left: 2px;
     color: #000000;
     content: "\f104";
     position: absolute; }
+    @media screen and (max-width: 768px) {
+      .product-visual_image-slider::before {
+        top: 30%; } }
+    @media screen and (max-width: 576px) {
+      .product-visual_image-slider::before {
+        top: 20%; } }
   .product-visual_image-slider::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
     font-size: 30px;
-    top: 20px;
-    right: 20px;
+    top: 35%;
+    right: 2px;
     color: #000000;
     content: "\f105";
     position: absolute; }
+    @media screen and (max-width: 768px) {
+      .product-visual_image-slider::after {
+        top: 30%; } }
+    @media screen and (max-width: 576px) {
+      .product-visual_image-slider::after {
+        top: 20%; } }
+
+.product-description {
+  padding-left: 50px; }
+  @media screen and (max-width: 576px) {
+    .product-description {
+      padding: 20px; } }
+  .product-description .price {
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 10px; }
+    .product-description .price .price-first {
+      display: inline-block;
+      color: #d7d7d7;
+      font-size: 1.875rem;
+      text-decoration: line-through;
+      padding-right: 10px; }
+      .product-description .price .price-first .fa-ruble-sign {
+        font-size: 1rem; }
+    .product-description .price .price-second {
+      display: inline-block;
+      color: #000000;
+      font-size: 2.25rem; }
+      .product-description .price .price-second .fa-ruble-sign {
+        font-size: 1.5rem;
+        color: #d7d7d7; }
+  .product-description .custom-select {
+    width: 170px;
+    height: 46px;
+    border-radius: 2px;
+    margin-bottom: 10px; }
+  .product-description .sizes-table_text {
+    font-size: 0.875rem;
+    text-decoration: underline; }
+  .product-description .btn-cart {
+    text-align: center;
+    line-height: 56px;
+    font-size: 0.8125rem;
+    color: #fff;
+    text-transform: uppercase;
+    height: 56px;
+    width: 260px;
+    border-radius: 2px;
+    background-image: -webkit-gradient(linear, right top, left top, from(#e93832), to(#00295b));
+    background-image: linear-gradient(to left, #e93832 0%, #00295b 100%);
+    padding-bottom: 10px; }
+    @media screen and (max-width: 576px) {
+      .product-description .btn-cart {
+        width: 100%;
+        font-size: 1rem; } }
+    .product-description .btn-cart:hover {
+      color: #689dda; }
+  .product-description .cart-link {
+    padding: 10px 0; }
+  .product-description .product-status {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px 0;
+    font-size: 0.875rem;
+    width: 260px;
+    line-height: 20px;
+    border: 1px solid #e9e9e9;
+    background-color: #f9fafc; }
+    @media screen and (max-width: 576px) {
+      .product-description .product-status {
+        width: 100%; } }
+    .product-description .product-status p {
+      margin: 0; }
+  .product-description .product-code {
+    font-size: 0.8125rem;
+    color: #666666;
+    font-weight: bold;
+    padding: 10px 0; }
+    .product-description .product-code span {
+      color: #112a58; }
+  .product-description .product-information {
+    font-size: 0.875rem;
+    width: 229px; }
+    @media screen and (max-width: 576px) {
+      .product-description .product-information {
+        width: 100%; } }
+    .product-description .product-information .bold-text {
+      font-weight: 600;
+      font-size: 1rem; }

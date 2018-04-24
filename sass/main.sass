@@ -16,26 +16,31 @@ a:hover
     text-decoration: none
 .topline
     background:#e5e5e5
-    height: 40px
+    min-height: 40px
     max-width: 1440px
     margin: 0 auto
     position: relative
+    display: block
+    height: 40px
 
 .topline-inner
     @media screen and (max-width: 768px)
         display: none
-        background-color: #282828
+        background-color: grey
         color: #fff
-        position: absolute
+        position: fixed
         top: 40px
-        left: 0px
+        left: 0
         opacity: 0.9
         width: 100vw
-        margin-left: -50px
+        padding-left: 0
         z-index: 1000
     @media screen and (max-width: 576px)
         width: 100vw
-        margin: 0
+.topline-list
+    @media screen and (max-width: 768px)
+        padding: 10px
+        margin-bottom: 0
 .topline-list_item
     display: inline-block
     line-height: 40px
@@ -50,6 +55,8 @@ a:hover
     a
         @media screen and (max-width: 768px)
             color: #fff
+            display: block
+            border-bottom: 1px solid white
 .entry
     display: inline-block
     line-height: 40px
@@ -123,12 +130,13 @@ main
 .navigation
     height: 80px
     max-width: 1440px
-    background: url("../img/-.png") no-repeat
-    background-size: cover
+    background-image: linear-gradient(to left, #e93832 0%, #00295b 100%)
     .category
         height: 80px
     .category-item_image
         margin-right: 24px
+        @media screen and (max-width: 576px)
+            display: none
     .category-item_image:first-child
         margin-right: 19px
     .category-item_image:last-child 
@@ -137,6 +145,8 @@ main
         text-transform: uppercase
         font-weight: bold
         font-size: 0.9375rem
+        @media screen and (max-width: 576px)
+            font-size: 0.75rem
 .breadcrumb
     padding-left: 0
     padding-top: 37px
@@ -146,30 +156,125 @@ main
     font-size: 2rem
     font-weight: bold
 .product-card
+    background: #fff
+    padding: 20px 10px
 .product-visual_image-main
-    padding: 20px
     img
         width: 100%
         height: auto
 .product-visual_image-slider
     padding: 10px 20px
     position: relative
+    @media screen and (max-width: 576px) 
+        padding: 5px 10px
+    div
+        padding: 5px
+    img
+        width: 100%
+        height: auto
+
     &::before
         font-family: "Font Awesome 5 Free"
         font-weight: 700
-        font-size: 30px
-        top: 20px
+        font-size: 1.875rem
+        top: 35%
+        left: 2px
         color: #000000
         content: "\f104"
         position: absolute
+        @media screen and (max-width: 768px)
+            top: 30%
+        @media screen and (max-width: 576px)
+            top: 20%
     &::after
         font-family: "Font Awesome 5 Free"
         font-weight: 700
         font-size: 30px
-        top: 20px
-        right: 20px
+        top: 35%
+        right: 2px
         color: #000000
         content: "\f105"
         position: absolute
-
+        @media screen and (max-width: 768px)
+            top: 30%
+        @media screen and (max-width: 576px)
+            top: 20%
+.product-description
+    padding-left: 50px
+    @media screen and (max-width: 576px)
+        padding: 20px
+    .price
+        display: inline-block
+        font-weight: bold
+        padding-bottom: 10px
+        .price-first
+            display: inline-block
+            color: #d7d7d7
+            font-size: 1.875rem
+            text-decoration: line-through
+            padding-right: 10px  
+            .fa-ruble-sign
+                font-size: 1rem  
+        .price-second
+            display: inline-block
+            color: #000000
+            font-size:  2.25rem
+            .fa-ruble-sign
+                font-size: 1.5rem
+                color: #d7d7d7
+    .custom-select
+        width: 170px
+        height: 46px
+        border-radius: 2px
+        margin-bottom: 10px
+    .sizes-table_text
+        font-size: 0.875rem
+        text-decoration: underline
+    .btn-cart
+        text-align: center
+        line-height: 56px
+        font-size: 0.8125rem
+        color: #fff
+        text-transform: uppercase
+        height: 56px
+        width: 260px
+        border-radius: 2px
+        background-image: linear-gradient(to left, #e93832 0%, #00295b 100%)
+        padding-bottom: 10px
+        @media screen and (max-width: 576px)
+            width: 100%
+            font-size: 1rem
+        &:hover
+            color: #689dda
+    .cart-link
+        padding: 10px 0
+    .product-status
+        box-sizing: border-box
+        padding: 20px
+        margin: 10px 0
+        font-size: 0.875rem
+        width: 260px
+        line-height: 20px
+        border: 1px solid #e9e9e9
+        background-color: #f9fafc
+        @media screen and (max-width: 576px)
+            width: 100%
+        p
+            margin: 0
+    .product-code
+        font-size: 0.8125rem
+        color: #666666
+        font-weight: bold
+        padding: 10px 0
+        span
+            color: #112a58
+    .product-information
+        font-size: 0.875rem
+        width: 229px
+        @media screen and (max-width: 576px)
+            width: 100%
+        .bold-text
+            font-weight: 600
+            font-size: 1rem
+            
     
