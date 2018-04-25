@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?153"></script>
 
-    
+
 
     <!-- Put this div tag to the place, where the Comments block will be -->
 
@@ -19,12 +19,17 @@
 </head>
 
 <body>
-        <script type="text/javascript">
-            window.onload = function () {
-             VK.init({apiId: 6460911, onlyWidgets: true});
-             VK.Widgets.Comments('vk_comments', {width: 500, limit: 15}, 321);
-            }
-            </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            VK.init({
+                apiId: 6460911,
+                onlyWidgets: true
+            });
+            VK.Widgets.Comments('vk_comments', {
+                limit: 15
+            }, 321);
+        }
+    </script>
     <div class="topline">
         <div class="container">
             <nav class="row">
