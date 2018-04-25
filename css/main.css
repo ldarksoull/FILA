@@ -379,7 +379,7 @@ main {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: 576px) {
       .distribution .distribution-content {
         height: 250px; } }
     .distribution .distribution-content .text {
@@ -428,3 +428,68 @@ main {
         height: 56px;
         border-radius: 0 2px 2px 0;
         background: #e93832 url("../img/email-send.png") no-repeat center; }
+
+.footer-navigation {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 30px 0; }
+  @media screen and (max-width: 576px) {
+    .footer-navigation .nav-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+  .footer-navigation .nav-list-item {
+    padding: 10px; }
+  .footer-navigation .text-bold {
+    font-size: 1rem;
+    font-weight: bold; }
+
+.bottomline {
+  -webkit-box-shadow: 0 -1px 0 #eeeeee;
+  box-shadow: 0 -1px 0 #eeeeee; }
+
+.phone {
+  color: #0d0d0d;
+  font-size: 1.375rem;
+  font-weight: bold;
+  padding: 45px 0px; }
+  @media screen and (max-width: 768px) {
+    .phone {
+      padding: 10px;
+      text-align: center; } }
+
+.socials {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .socials li {
+    display: inline-block;
+    padding: 45px 40px;
+    font-size: 1.5rem; }
+    @media screen and (max-width: 768px) {
+      .socials li {
+        padding: 10px; } }
+  .socials i {
+    color: #00295b; }
+    .socials i:hover {
+      color: #000000; }
+
+.text-footer {
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 50px 0px; }
+  @media screen and (max-width: 768px) {
+    .text-footer {
+      padding: 10px;
+      text-align: center; } }
