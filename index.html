@@ -9,10 +9,22 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?153"></script>
+
+    
+
+    <!-- Put this div tag to the place, where the Comments block will be -->
+
     <title>Fila</title>
 </head>
 
 <body>
+        <script type="text/javascript">
+            window.onload = function () {
+             VK.init({apiId: 6460911, onlyWidgets: true});
+             VK.Widgets.Comments('vk_comments', {width: 500, limit: 15}, 321);
+            }
+            </script>
     <div class="topline">
         <div class="container">
             <nav class="row">
@@ -55,14 +67,14 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-xs-6 col-sm-6">
+                <div class="col-lg-3 col-md-3 col-xs-6 col-sm-6">
                     <div class="logo">
                         <a href="#">
                             <img class="logo-img" src="img/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
                     <div class="header-title">
                         <h1>Официальный сайт Fila Skates в России</h1>
                         <h2>Интернет-магазин:
@@ -166,6 +178,12 @@
                                 <img src="img/roliki6.png" alt="">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="vk_comments"></div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 product-description d-flex flex-column justify-content-flex-start">
                         <div class="price">
@@ -202,15 +220,22 @@
                                 опытных роллеров, лучшие ролики в линейке.</p>
                             <br>
 
-                            <p><span class="bold-text">100mm колеса</span><br> Технология, запатентованная компанией FILA. Технологи модифицировали стандартное
-                                крепление ботинка и рамы, и разместили 4 колеса по 100 мм вместо 5-ти колес по 84 мм, сохранив
-                                ту же устойчивость конька.</p>
+                            <p>
+                                <span class="bold-text">100mm колеса</span>
+                                <br> Технология, запатентованная компанией FILA. Технологи модифицировали стандартное крепление
+                                ботинка и рамы, и разместили 4 колеса по 100 мм вместо 5-ти колес по 84 мм, сохранив ту же
+                                устойчивость конька.</p>
                             <br>
 
-                            <p><span class="bold-text"> Особенности:</span><br> — Алюминиевая рама<br> — Колеса 4xFila 100mm/84A<br> — Подшипники ABEC 9<br> — Ботинок из углепластика</p>
+                            <p>
+                                <span class="bold-text"> Особенности:</span>
+                                <br> — Алюминиевая рама
+                                <br> — Колеса 4xFila 100mm/84A
+                                <br> — Подшипники ABEC 9
+                                <br> — Ботинок из углепластика</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
     </main>
